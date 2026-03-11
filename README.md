@@ -1,6 +1,6 @@
 <div align="center">
 
-# **`NetFlow Toolkit`** | Network Flow Format ([NetFlow](https://wikipedia.org/wiki/NetFlow)) Analysing Toolkit
+# **`Flow Toolkit`** | Network Traffic [Flow](https://wikipedia.org/wiki/Traffic_flow_(computer_networking)) Toolkit
 </div>
 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/playlist?list=PL9V4Zu3RroiWqr2YTIFniPf5GDp6WteEV&si=CiOTgkl-RWMihxkb)
@@ -18,7 +18,7 @@
 
 ## Flow Types
 
-* NetFlow
+* [NetFlow](https://wikipedia.org/wiki/NetFlow)
 * sFlow
 * IPFIX
 
@@ -37,4 +37,4 @@ You can access the my other awesome lists [here](https://cyberthreatdefence.com/
 ### Contributors
 [Thanks goes to these contributors](https://github.com/cybersecurity-dev/NetFlow-Toolkit/graphs/contributors)!
 
-[🔼 Back to top](#netflow-toolkit--network-flow-format-netflow-analysing-toolkit)
+[🔼 Back to top](#flow-toolkit--network-traffic-flow-toolkit)
