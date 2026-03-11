@@ -19,8 +19,8 @@
 ## Flow Types
 
 * [NetFlow](https://wikipedia.org/wiki/NetFlow)
-* sFlow
-* IPFIX
+* [sFlow](https://wikipedia.org/wiki/SFlow)
+* [IPFIX](https://wikipedia.org/wiki/IP_Flow_Information_Export)
 
 
 ##  Flow Generator and Analyzer
