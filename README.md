@@ -1,5 +1,48 @@
 <div align="center">
 
+```mermaid
+flowchart LR
+
+A[Network Traffic] --> B{Flow Technology}
+
+B --> C[NetFlow]
+B --> D[sFlow]
+B --> E[IPFIX]
+
+%% NetFlow
+C --> C1[Developed by Cisco]
+C --> C2[Flow-based Monitoring]
+C --> C3[L3/L4 Metadata Export]
+C --> C4[Traffic Analysis]
+C --> C5[Capacity Planning]
+
+%% sFlow
+D --> D1[Developed by InMon]
+D --> D2[Packet Sampling]
+D --> D3[Interface Statistics]
+D --> D4[High-Speed Networks]
+D --> D5[Low Resource Usage]
+
+%% IPFIX
+E --> E1[IETF Standard]
+E --> E2[Template-Based Export]
+E --> E3[Extensible Fields]
+E --> E4[Vendor Neutral]
+E --> E5[Advanced Analytics]
+
+%% Collection
+C4 --> F[Flow Collector]
+D4 --> F
+E4 --> F
+
+F --> G[Storage Database]
+G --> H[Network Monitoring]
+G --> I[Anomaly Detection]
+G --> J[Malware Detection]
+G --> K[Security Analytics]
+G --> L[Traffic Engineering]
+```
+
 # **`Flow Toolkit`** | Network Traffic [Flow](https://wikipedia.org/wiki/Traffic_flow_(computer_networking)) Toolkit
 </div>
 
