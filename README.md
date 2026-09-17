@@ -52,7 +52,7 @@ G --> L[Traffic Engineering]
 <p align="center">
     <a href="https://github.com/cybersecurity-dev/"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/github.svg" alt="GitHub"></a>
     &nbsp;
-    <a href="https://www.youtube.com/@CyberThreatDefence"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/youtube.svg" alt="YouTube"></a>
+    <a href="https://www.youtube.com/@CyberThreatDefense"><img height="25" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/youtube.svg" alt="YouTube"></a>
     &nbsp;
     <a href="https://cyberthreatdefence.com/my_awesome_lists"><img height="20" src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/blog.svg" alt="My Awesome Lists"></a>
     <img src="https://github.com/cybersecurity-dev/cybersecurity-dev/blob/main/assets/bar.gif">
@@ -61,13 +61,87 @@ G --> L[Traffic Engineering]
 
 ## Flow Types
 
-* [NetFlow](https://wikipedia.org/wiki/NetFlow)
-* [sFlow](https://wikipedia.org/wiki/SFlow)
-* [IPFIX](https://wikipedia.org/wiki/IP_Flow_Information_Export)
+```text
+        TCP/IP MODEL
 
+┌─────────────────────────────┐
+│ Application                 │
+│ HTTP HTTPS DNS SMTP SSH     │◄── IPFIX
+├─────────────────────────────┤
+│ Transport                   │
+│ TCP UDP SCTP                │◄── NetFlow
+│                             │◄── sFlow
+│                             │◄── IPFIX
+├─────────────────────────────┤
+│ Internet                    │
+│ IPv4 IPv6 ICMP              │◄── NetFlow
+│                             │◄── sFlow
+│                             │◄── IPFIX
+├─────────────────────────────┤
+│ Network Access              │
+│ Ethernet VLAN ARP Wi-Fi     │◄── sFlow
+│                             │◄── IPFIX
+└─────────────────────────────┘
+```
+
+```text
+Technology    Application   Transport   Internet   Network Access
+
+NetFlow            ✗            ✓           ✓            ✗
+
+sFlow              ✗            ✓           ✓            ✓
+
+IPFIX              ✓            ✓           ✓            ✓
+```
+
+### [NetFlow](https://wikipedia.org/wiki/NetFlow)
+> Who talks to whom? (IP + Ports)
+```txt
+NetFlow
+└── Transport + Internet
+    (TCP/UDP + IP)
+```
+
+### [sFlow](https://wikipedia.org/wiki/SFlow)
+> What is happening on the wire? (Sampled packets + Interfaces)
+```txt
+sFlow
+└── Network Access + Internet + Transport
+    (Ethernet + IP + TCP/UDP)
+```
+
+### [IPFIX](https://wikipedia.org/wiki/IP_Flow_Information_Export)
+> Who talks, how, using what application, and what metadata is available?
+```txt
+IPFIX
+└── All TCP/IP Layers
+    (Application + Transport + Internet + Network Access)
+```
+
+```mermaid
+flowchart LR
+
+A[TCP/IP Layers]
+
+A --> APP[Application]
+A --> TR[Transport]
+A --> INET[Internet]
+A --> NET[Network Access]
+
+INET --> NF[NetFlow]
+TR --> NF
+
+NET --> SF[sFlow]
+INET --> SF
+TR --> SF
+
+NET --> IPF[IPFIX]
+INET --> IPF
+TR --> IPF
+APP --> IPF
+```
 
 ##  Flow Generator and Analyzer
-
 
 ##
 
