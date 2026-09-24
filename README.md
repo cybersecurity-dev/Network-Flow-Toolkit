@@ -153,6 +153,14 @@ APP --> IPF
 ```
 
 ## Flow Generator and Analyzer
+
+| Tool | Primary role | Input | Output | Best use case | Key advantage | Main consideration |
+|---|---|---|---|---|---|---|
+| **YAF** | Flow meter and exporter | Live interface, PCAP | IPFIX, IPFIX-based files | Reference baseline for packet-to-flow conversion | Bidirectional IPFIX flow generation and integration with SiLK | Output may require additional conversion for ML pipelines |
+| **nProbe** | Flow probe, collector and traffic enricher | Live traffic, PCAP, NetFlow, IPFIX, sFlow | NetFlow, IPFIX, JSON | Application-aware monitoring and DPI | Layer 7 application identification through nDPI | Some advanced functionality may require a commercial licence |
+| **CICFlowMeter** | Bidirectional statistical flow generator | PCAP, live interface | CSV | ML/DL intrusion and malware-detection datasets | Produces more than 80 directional and statistical features | Feature definitions, timeouts and duplicated columns require validation |
+
+
 * [YAF (Yet Another Flowmeter)](https://tools.netsa.cert.org/yaf2/index.html)
 ##
 
