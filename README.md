@@ -73,26 +73,26 @@ G --> L[Traffic Engineering]
 ## Flow Types
 
 ```text
-        TCP/IP MODEL
+                TCP/IP MODEL
 
-┌─────────────────────────────┐
-│ Application                 │
-│ HTTP HTTPS DNS SMTP SSH     │◄── IPFIX
-├─────────────────────────────┤
-│ Transport                   │
-│ TCP UDP SCTP                │◄── NetFlow
-│                             │◄── sFlow
-│                             │◄── IPFIX
-├─────────────────────────────┤
-│ Internet                    │
-│ IPv4 IPv6 ICMP              │◄── NetFlow
-│                             │◄── sFlow
-│                             │◄── IPFIX
-├─────────────────────────────┤
-│ Network Access              │
-│ Ethernet VLAN ARP Wi-Fi     │◄── sFlow
-│                             │◄── IPFIX
-└─────────────────────────────┘
+        ┌─────────────────────────────┐
+        │ Application                 │
+        │ HTTP HTTPS DNS SMTP SSH     │◄── IPFIX
+        ├─────────────────────────────┤
+        │ Transport                   │
+        │ TCP UDP SCTP                │◄── NetFlow
+        │                             │◄── sFlow
+        │                             │◄── IPFIX
+        ├─────────────────────────────┤
+        │ Internet                    │
+        │ IPv4 IPv6 ICMP              │◄── NetFlow
+        │                             │◄── sFlow
+        │                             │◄── IPFIX
+        ├─────────────────────────────┤
+        │ Network Access              │
+        │ Ethernet VLAN ARP Wi-Fi     │◄── sFlow
+        │                             │◄── IPFIX
+        └─────────────────────────────┘
 ```
 
 ```text
