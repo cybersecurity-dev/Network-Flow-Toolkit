@@ -8,10 +8,12 @@ sudo apt-get install -y software-properties-common wget curl gnupg apt-transport
 #sudo apt-get install -y ./apt-ntop-stable.deb
 
 # (Alternative for Ubuntu 24.04, uncomment if needed)
- wget https://packages.ntop.org/apt-stable/24.04/all/apt-ntop-stable.deb
- sudo apt-get install -y ./apt-ntop-stable.deb
+wget https://packages.ntop.org/apt-stable/24.04/all/apt-ntop-stable.deb
+sudo apt-get install -y ./apt-ntop-stable.deb
 
 # Update package lists and install nprobe
 sudo apt-get update
 sudo apt-get install -y nprobe
+
+# Verify Installations
 nprobe --version
