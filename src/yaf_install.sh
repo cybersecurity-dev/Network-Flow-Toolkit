@@ -22,5 +22,8 @@ cd ..
 
 # Update shared library links
 sudo ldconfig
+
+sudo apt-get install -y softflowd
+
 # Verify Installations
 yaf --version
